@@ -94,6 +94,11 @@ if DATABASE_URL:
             ssl_require=True
         )
     }
+
+    DATABASES['default']['OPTIONS'] = {
+        'options': '-c search_path=edutrack'
+    }
+
 else:
     DATABASES = {
         'default': {

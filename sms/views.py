@@ -8,6 +8,10 @@ from django.db.models import Count, Q
 from .models import Batch, Student, Attendance
 from .forms import StudentForm, AttendanceForm
 
+from django.shortcuts import redirect
+
+def home(request):
+    return redirect('student_list')
 
 # Student Registration
 def register_student(request):
